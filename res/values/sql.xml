@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 本地数据库sql -->
+ 	<string-array name="sql">
+        <item>CREATE TABLE IF NOT EXISTS cacheUrlData(url TEXT PRIMARY KEY, cacheData TEXT, createTime TEXT)</item>
+    </string-array>
+ 		<!-- select -->
+ 		<!-- insert -->
+ 		<!-- update -->
+ 		<!-- delete -->
+ 	<!-- table end -->
+</resources>

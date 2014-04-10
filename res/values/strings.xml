@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HTTP</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- BaseActivity start -->
+    <string name="confirm">确定</string>
+	<string name="cancel">取消</string>
+
+    <string name="network_show_title">没有可用网络</string>
+    <string name="network_show_msg">是否对网络进行设置？</string>
+    <string name="network_show_setting">设置</string>
+    <string name="network_show_exit">离开</string>
+    <string name="network_show_error">网络异常！</string>
+    <string name="network_show_connectionless">无网络连接！</string>
+
+    <string name="dialog_title_getDataFail">获取数据失败</string>
+    <string name="dialog_title_newwork_request_timeout">网络超时，服务器断开或者请检查网络连接是否正常</string>
+    <string name="dialog_title_nowData">暂无数据</string>
+    <string name="dialog_title_getUserInfoDataFail">获取用户信息失败</string>
+
+    <string name="progress_loading">正在加载，请稍后…</string>
+    <string name="progress_login">正在验证数据，请稍后…</string>
+    <string name="progress_comment">正在提交，请稍后…</string>
+    <string name="no_img_load">no image data!</string>
+    <!-- BaseActivity end-->
+
+</resources>
