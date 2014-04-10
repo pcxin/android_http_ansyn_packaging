@@ -334,8 +334,9 @@ class MyRunnable implements Runnable{
 				response = AnsynHttpRequest.mHttpClient.execute(get);
 				break;
 			case AnsynHttpRequest.POST: // post 方式提交
-				HttpPost post = new HttpPost(C.http.http_request_head);
+				HttpPost post = new HttpPost(url);
 //				post.setHeader("User-Agent", sUserAgent.toString());
+				Log.i("httpurl", url + map.toString());
 				List<NameValuePair> params = new ArrayList<NameValuePair>();
 		        if(map != null && map.size()>0)
 					for (String key : map.keySet()) {

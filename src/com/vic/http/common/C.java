@@ -62,10 +62,10 @@ public final class C {
     	public static final String CType = "1";
     	public static final String CChannel = "dev";
     	public static boolean isInstall = false;
-    	public static final String http_request_head = "https://raw.githubusercontent.com/pingchangxin/BPDownload/master/Resources/CloseNormal.png";
+    	public static final String http_request_head = "https://raw.githubusercontent.com/pingchangxin/android_http_ansyn_packaging/master/res/raw/aaa.json";
     	public static String http_img = "";
-    	public static final String http_test_bb = "";
-    	public static final String http_test_cc = "";
+    	public static final String http_test_bb = "https://raw.githubusercontent.com/pingchangxin/android_http_ansyn_packaging/master/res/raw/bbb.json";
+    	public static final String http_test_cc = "https://raw.githubusercontent.com/pingchangxin/android_http_ansyn_packaging/master/res/raw/ccc.json";
 
     	/*** http 标识配置 */
 //    	public static final int http_area = "http_area".hashCode(); //待优化
