@@ -1,6 +1,8 @@
 android_http_ansyn_packaging
 ============================
 
+my blog article -> http://blog.csdn.net/vpingchangxin/article/details/23375461
+
 android http ansyn packaging android http
 
 本demo主要对异步请求封装 可用作基本项目框架来使用
