@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.vic.http.common.C;
 import com.vic.http.http.AnsynHttpRequest;
+import com.vic.http.http.AnsynHttpRequestV2;
 import com.vic.http.http.ObserverCallBack;
 import com.vic.http.utils.MapData;
 
@@ -36,7 +37,28 @@ public class MainActivity extends BaseActivity {
 //		map.put("method", "businesscategory_list");
 		AnsynHttpRequest.requestByPost(context, C.http.http_test_cc,callbackData, C.http.http_area, map, false, false);
 
+		// v2 use  ---------- best 
+		AnsynHttpRequestV2.requestByPost(context, C.http.http_test_cc,callbackDataV2, C.http.http_area, map, false, false);
 	}
+
+	/**
+	 * 异步回调回来并处理数据
+	 */
+	private ObserverCallBack callbackDataV2 = new ObserverCallBack(){
+		public void back(String data, int url) {
+			switch (url) {
+			case C.http.http_area: // 进行数据解析
+				if(data == null) {
+					return;
+				}
+				Toast.makeText(context, "测试数据 ："+data, Toast.LENGTH_SHORT).show();
+				break;
+			default:
+				Toast.makeText(context, "测试数据 数据编号："+url, Toast.LENGTH_SHORT).show();
+				break;
+			}
+		}
+	};
 
 	/**
 	 * 异步回调回来并处理数据
