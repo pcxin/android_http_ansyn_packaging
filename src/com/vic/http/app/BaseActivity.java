@@ -40,7 +40,7 @@ public class BaseActivity extends Activity {
 
 	public static boolean isChangeLangage = true;
 
-	protected ListFragment mFrag;
+	protected ListFragment mFrag; // 标签格式
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
