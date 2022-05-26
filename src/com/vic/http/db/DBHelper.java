@@ -20,6 +20,7 @@ import android.util.Log;
 
 import com.vic.http.app.R;
 import com.vic.http.entity.Store;
+import com.vic.utils.Md5Utils;
 
 /**
  *
@@ -73,7 +74,7 @@ public class DBHelper extends SQLiteOpenHelper{
 		Cursor cursor = null;
 		try {
 			db = getReadableDatabase(); // 获得数据库读对象
-			cursor = db.rawQuery("select cacheData,createTime from cacheUrlData where url = ?", new String[]{url});
+			cursor = db.rawQuery("select cacheData,createTime from cacheUrlData where url = ?", new String[]{Md5Utils.md5(url)});
 			while (cursor.moveToNext()) {
 				String data =cursor.getString(0);
 				String time =cursor.getString(1);
@@ -101,6 +102,7 @@ public class DBHelper extends SQLiteOpenHelper{
 	 */
 	public synchronized void addOrUpdateURLData(String url,String jsonData){
 		try {
+			url = Md5Utils.md5(url);
 			boolean isExists = checkURLData(url);
 			db = getWritableDatabase(); // 获得数据库写对象
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -138,8 +140,9 @@ public class DBHelper extends SQLiteOpenHelper{
 	 */
 	public boolean deleteURLData(String url){
 		try{
+			url = Md5Utils.md5(url);
 			db = getWritableDatabase(); // 获得数据库写对象\
-			return db.delete("cacheUrlData", "url like ?", new String[]{"%"+url+"%"}) > 0;
+			return db.delete("cacheUrlData", "url = ?", new String[]{url}) > 0;
 		}catch(Exception e){
 			e.printStackTrace();
 		}finally{
